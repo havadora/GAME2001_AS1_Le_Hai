@@ -137,11 +137,12 @@ public:
 		return true;
 	}
 	
+
 	bool check(T num)
 	{
 		//assert(this->arrays != nullptr);
 
-		for (int i = 0; i < this->numArray; i++)
+		for (int i = 0; i <= this->numArray; i++)
 		{
 			if (this->arrays[i] == num)
 			{
@@ -152,13 +153,23 @@ public:
 		}
 		return true;
 	}
-	void print(T num)
+	void print()
 	{
-		for (int i = 0; i < num; i++)
+		for (int i = 0; i < this->numArray; i++)
 		{
 			cout << this->arrays[i] << " ";
 		}
 		cout << endl;
+	}
+
+	void expansion(int time)
+	{
+		for (int i = 0; i < time; i++)
+		{
+			T temp;
+			temp = this->arrays[i] * 2;
+			push(temp);
+		}
 	}
 private:
 	
@@ -174,9 +185,9 @@ public:
 
 	//push
 
-	void print(T num)
+	void print()
 	{
-		for (int i = 0; i < num; i++)
+		for (int i = 0; i < this->maxArray; i++)
 		{
 			cout << this->arrays[i] << " ";
 		}
@@ -275,7 +286,7 @@ public:
 	{
 		assert(this->arrays != nullptr);
 
-		for (int i = 0; i < this->numArray; i++)
+		for (int i = 0; i <= this->numArray; i++)
 		{
 			if (this->arrays[i] == num)
 			{
@@ -305,5 +316,5 @@ public:
 		
 	}
 private:
-	int growsArray;
+	//int growsArray;
 };

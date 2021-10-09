@@ -5,18 +5,14 @@ using namespace std;
 int main()
 {
 	int size = 5;
-	UnorderArray<int> array(size);
+	UnorderArray<int> array(1);
 	OrderArray<int> array1(size);
 	//array.setSize(3);
 	cout << "Unorder Array" << endl;
 	array.push(5);
-	array.push(11);
-	array.push(56);
-	array.push(10);
-	array.push(95);
-	array.push(2);
+	array.expansion(2);
 	//array1.sorting();
-	array.print(size);
+	array.print();
 	cout << endl;
 	cout << "Order Array" << endl;
 	array1.push(4);
@@ -28,7 +24,7 @@ int main()
 	//array1.sorting();
 	
 	array1.sorting();
-	array1.print(size);
+	array1.print();
 	
 	
     system("pause");
