@@ -10,7 +10,11 @@ int main()
 	//array.setSize(3);
 	cout << "Unorder Array" << endl;
 	array.push(5);
-	array.Expand();
+	array1.push(4);
+	array1.push(43);
+	array1.push(2);
+	array1.push(44);
+	
 	//array1.sorting();
 	array.print();
 	cout << endl;
