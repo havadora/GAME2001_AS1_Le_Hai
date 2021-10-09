@@ -53,21 +53,15 @@ public:
 	//push
 	void push(T val)
 	{
-		//assert(this->arrays != nullptr);
-		if (check(val) == true)
-		{
+		assert(this->arrays != nullptr);
+		
 			if (this->numArray >= this->maxArray)
 			{
 				Expand();
 			}
 			this->arrays[this->numArray] = val;
 			this->numArray++;
-		}
-		if (check(val) == false)
-		{
-			cout << "This number alreay in the array" << endl;
-		}
-
+		
 	}
 
 	void pop()
@@ -118,23 +112,18 @@ public:
 		this->numArray = 0;
 	}
 
-	bool Expand()
+	void Expand()
 	{
-		if (this->growArray <= 0)
-		{
-			return false;
-		}
-
-		T* temp = new T[this->maxArray + this->growArray];
+		T* temp = new T[this->maxArray + this->maxArray];
+		
 		assert(temp != nullptr);
 		memcpy(temp, this->arrays, sizeof(T) * this->maxArray);
 		delete[] this->arrays;
-
 		this->arrays = temp;
 		temp = nullptr;
 
-		this->maxArray += this->growArray;
-		return true;
+		this->maxArray += this->maxArray;
+		
 	}
 	
 
